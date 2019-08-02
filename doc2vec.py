@@ -11,13 +11,13 @@ doc_name_list = []
 doc_train_list = []
 doc_test_list = []
 
-f = open('data/' + dataset + '_pvdm_200.vec', 'r') 
+f = open('text_gcn/data/' + dataset + '_pvdm_200.vec', 'r') 
 # _pvdm_200.vec
 # _doc_vectors.txt
 vector_lines = f.readlines()
 f.close()
 
-f = open('data/' + dataset + '.txt', 'r')
+f = open('text_gcn/data/' + dataset + '.txt', 'r')
 lines = f.readlines()
 f.close()
 
