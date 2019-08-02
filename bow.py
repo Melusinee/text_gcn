@@ -20,7 +20,7 @@ doc_name_list = []
 doc_train_list = []
 doc_test_list = []
 
-f = open('data/' + dataset + '.txt', 'r')
+f = open('text_gcn/data/' + dataset + '.txt', 'r')
 for line in f.readlines():
     doc_name_list.append(line.strip())
     temp = line.split("\t")
@@ -31,7 +31,7 @@ for line in f.readlines():
 f.close()
 
 doc_content_list = []
-f = open('data/corpus/' + dataset + '.clean.txt', 'r')
+f = open('text_gcn/data/corpus/' + dataset + '.clean.txt', 'r')
 for line in f.readlines():
     doc_content_list.append(line.strip())
 f.close()
@@ -46,7 +46,7 @@ random.shuffle(train_ids)
 # partial labeled data
 
 
-f = open('data/' + dataset + '.train.index', 'r')
+f = open('text_gcn/data/' + dataset + '.train.index', 'r')
 lines = f.readlines()
 f.close()
 train_ids = [int(x.strip()) for x in lines]
