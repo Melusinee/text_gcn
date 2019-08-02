@@ -166,7 +166,7 @@ print(len(word_embeddings), len(train_doc_embeddings),
       len(test_doc_embeddings))
 print(word_embeddings)
 
-f = open('data/corpus/' + dataset + '_vocab.txt', 'r')
+f = open('text_gcn/data/corpus/' + dataset + '_vocab.txt', 'r')
 words = f.readlines()
 f.close()
 
@@ -179,7 +179,7 @@ for i in range(vocab_size):
     word_vectors.append(word + ' ' + word_vector_str)
 
 word_embeddings_str = '\n'.join(word_vectors)
-f = open('data/' + dataset + '_word_vectors.txt', 'w')
+f = open('text_gcn/data/' + dataset + '_word_vectors.txt', 'w')
 f.write(word_embeddings_str)
 f.close()
 
@@ -198,6 +198,6 @@ for i in range(test_size):
     doc_id += 1
 
 doc_embeddings_str = '\n'.join(doc_vectors)
-f = open('data/' + dataset + '_doc_vectors.txt', 'w')
+f = open('text_gcn/data/' + dataset + '_doc_vectors.txt', 'w')
 f.write(doc_embeddings_str)
 f.close()
