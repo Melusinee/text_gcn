@@ -25,7 +25,7 @@ print(stop_words)
 # dataset = '20ng'
 
 doc_content_list = []
-f = open('data/corpus/' + dataset + '.txt', 'rb')
+f = open('text_gcn/data/corpus/' + dataset + '.txt', 'rb')
 # f = open('data/wiki_long_abstracts_en_text.txt', 'r')
 for line in f.readlines():
     doc_content_list.append(line.strip().decode('latin1'))
@@ -62,7 +62,7 @@ for doc_content in doc_content_list:
 
 clean_corpus_str = '\n'.join(clean_docs)
 
-f = open('data/corpus/' + dataset + '.clean.txt', 'w')
+f = open('text_gcn/data/corpus/' + dataset + '.clean.txt', 'w')
 #f = open('data/wiki_long_abstracts_en_text.clean.txt', 'w')
 f.write(clean_corpus_str)
 f.close()
@@ -72,7 +72,7 @@ min_len = 10000
 aver_len = 0
 max_len = 0 
 
-f = open('data/corpus/' + dataset + '.clean.txt', 'r')
+f = open('text_gcn/data/corpus/' + dataset + '.clean.txt', 'r')
 #f = open('data/wiki_long_abstracts_en_text.txt', 'r')
 lines = f.readlines()
 for line in lines:
