@@ -171,7 +171,7 @@ for word in vocab:
 string = '\n'.join(definitions)
 
 
-f = open('data/corpus/' + dataset + '_vocab_def.txt', 'w')
+f = open('text_gcn/data/corpus/' + dataset + '_vocab_def.txt', 'w')
 f.write(string)
 f.close()
 
@@ -194,7 +194,7 @@ for i in range(len(vocab)):
 
 string = '\n'.join(word_vectors)
 
-f = open('data/corpus/' + dataset + '_word_vectors.txt', 'w')
+f = open('text_gcn/data/corpus/' + dataset + '_word_vectors.txt', 'w')
 f.write(string)
 f.close()
 
